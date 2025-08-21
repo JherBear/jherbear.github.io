@@ -10,6 +10,7 @@ function rollDice(){
     const rollResult = Math.floor(Math.random() * 6) +1;
     const diceFace = getDiceFace(rollResult);
     diceEl.innerHTML = diceFace;
+    //diceEl.textContent = diceFace;
     historyList.push(rollResult);
     updateRollHistory();
 }
@@ -18,7 +19,7 @@ function updateRollHistory(){
 
 }
 
-function getDiceFace(){
+function getDiceFace(rollResult){
     switch(rollResult){
         case 1:
             return "&#9856;"
