@@ -16,11 +16,13 @@ function rollDice(){
 
 function updateRollHistory(){
     rollHistoryEl.innerHTML = "";
-    for(let i = historyList.length; i >= 0; i--) {
+    console.log("button pressed:");
+    for(let i = historyList.length; i > 0; i--) {
         const listItem = document.createElement("li")
-        listItem.innerHTML = `Roll ${i + 1}: <span>
+        console.log("i = " + i);
+        listItem.innerHTML = `Roll ${i}: <span>
         ${getDiceFace(
-            historyList[i]
+            historyList[i-1]
         )}</span>`;
         rollHistoryEl.appendChild(listItem);
     }
