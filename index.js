@@ -16,7 +16,7 @@ function rollDice(){
 
 function updateRollHistory(){
     rollHistoryEl.innerHTML = "";
-    for(let i = historyList.length; i > 0; i--) {
+    for(let i = historyList.length -1; i > 0; i--) {
         const listItem = document.createElement("li")
         listItem.innerHTML = `Roll ${i + 1}: <span>
         ${getDiceFace(
